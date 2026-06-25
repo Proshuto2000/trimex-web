@@ -40,6 +40,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 ::selection { background: transparent; }
 ::-moz-selection { background: transparent; }
+body { user-select: none; -webkit-user-select: none; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
   font-family: var(--font-body);
@@ -98,6 +99,24 @@ img { display: block; max-width: 100%; }
   gap: 0;
   flex-shrink: 0;
 }
+.nav-flag {
+  display: inline-flex;
+  height: 14px;
+  width: 21px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  align-self: center;
+}
+.nav-flag span {
+  flex: 1;
+  display: block;
+}
+.nav-flag span:nth-child(1) { background: #D91023; }
+.nav-flag span:nth-child(2) { background: #FFFFFF; }
+.nav-flag span:nth-child(3) { background: #D91023; }
 .logo-t { color: var(--brick); }
 .logo-srl {
   font-size: 0.65rem;
